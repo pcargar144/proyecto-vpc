@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +34,7 @@
         body {
             background-color: #f8fafc;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -40,6 +42,7 @@
         }
     </style>
 </head>
+
 <body class="text-slate-800 antialiased min-h-screen flex flex-col">
 
 
@@ -49,48 +52,66 @@
             <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M0 40V0H40" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <path d="M0 40V0H40" fill="none" stroke="currentColor" stroke-width="1" />
                     </pattern>
                 </defs>
-                <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)" />
             </svg>
         </div>
-        
+
         <div class="max-w-5xl mx-auto relative z-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-100 text-sm font-medium mb-6 border border-brand-500/30">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-100 text-sm font-medium mb-6 border border-brand-500/30">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
                 Propuesta de Proyecto Final - Nivel B2
             </div>
             <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
                 Proyecto Nube Segura: Despliegue de Infraestructuras en AWS y Túneles VPN
             </h1>
             <p class="text-lg md:text-xl text-slate-300 max-w-3xl">
-                Unidad didáctica enfocada en entornos restrictivos, resolución de problemas técnicos y dilemas éticos en ciberseguridad.
+                Unidad didáctica enfocada en entornos restrictivos, resolución de problemas técnicos y dilemas éticos en
+                ciberseguridad.
             </p>
         </div>
     </header>
 
 
     <main class="flex-grow max-w-5xl mx-auto px-6 py-12 w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
 
         <div class="md:col-span-1 space-y-6">
-            
+
 
             <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div class="flex items-center gap-3 mb-2 text-brand-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                        </path>
+                    </svg>
                     <h3 class="font-semibold text-lg">Centro de interés</h3>
                 </div>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    Ciberseguridad, Redes Privadas Virtuales (VPN), Cloud Computing, troubleshooting y ética profesional.
+                    Ciberseguridad, Redes Privadas Virtuales (VPN), Cloud Computing, troubleshooting y ética
+                    profesional.
                 </p>
             </div>
 
 
             <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div class="flex items-center gap-3 mb-2 text-brand-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21l9-5-9-5-9 5 9 5z"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 21l9-5-9-5-9 5 9 5z"></path>
+                    </svg>
                     <h3 class="font-semibold text-lg">Nivel dirigido</h3>
                 </div>
                 <p class="text-sm text-slate-600 font-medium">
@@ -101,7 +122,11 @@
 
             <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div class="flex items-center gap-3 mb-2 text-brand-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg>
                     <h3 class="font-semibold text-lg">Materia implicada</h3>
                 </div>
                 <p class="text-sm text-slate-600">
@@ -113,12 +138,21 @@
 
             <div class="grid grid-cols-2 gap-4">
                 <div class="glass-card rounded-2xl p-4 shadow-sm text-center">
-                    <svg class="w-6 h-6 mx-auto mb-2 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-6 h-6 mx-auto mb-2 text-brand-600" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
                     <h3 class="font-semibold text-sm mb-1">Duración</h3>
                     <p class="text-xs text-slate-600">4 sesiones<br>(8 horas)</p>
                 </div>
                 <div class="glass-card rounded-2xl p-4 shadow-sm text-center">
-                    <svg class="w-6 h-6 mx-auto mb-2 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    <svg class="w-6 h-6 mx-auto mb-2 text-brand-600" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
+                        </path>
+                    </svg>
                     <h3 class="font-semibold text-sm mb-1">Idioma</h3>
                     <p class="text-xs text-slate-600">Español e Inglés Técnico</p>
                 </div>
@@ -128,61 +162,95 @@
 
 
         <div class="md:col-span-2 space-y-8">
-            
+
 
             <section class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
                 <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-slate-800">
-                    <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
                     Descripción General
                 </h2>
                 <div class="prose prose-slate prose-a:text-brand-600">
                     <p class="mb-4">
-                        En esta Situación de Aprendizaje, el alumnado asumirá el rol de un equipo de administradores de sistemas que debe desplegar una infraestructura segura para una empresa utilizando <strong>Amazon Web Services (AWS)</strong>. El alumnado aprenderá a crear una Virtual Private Cloud (VPC) y a configurar instancias EC2.
+                        En esta Situación de Aprendizaje, el alumnado asumirá el rol de un equipo de administradores de
+                        sistemas que debe desplegar una infraestructura segura para una empresa utilizando
+                        <strong>Amazon Web Services (AWS)</strong>. El alumnado aprenderá a crear una Virtual Private
+                        Cloud (VPC) y a configurar instancias EC2.
                     </p>
                     <p class="mb-4">
-                        Sin embargo, el proyecto incluirá un <em>"fallo controlado"</em> intencionado: se preparará un entorno de red restrictivo donde el puerto 22 (SSH) esté bloqueado por un firewall corporativo. 
+                        Sin embargo, el proyecto incluirá un <em>"fallo controlado"</em> intencionado: se preparará un
+                        entorno de red restrictivo donde el puerto 22 (SSH) esté bloqueado por un firewall corporativo.
                     </p>
                     <p class="mb-4">
-                        El alumnado deberá diagnosticar por qué no pueden acceder a sus servidores, investigar soluciones y aprender a implementar y configurar un <strong>servidor VPN</strong> en su infraestructura para lograr una conexión remota segura mediante tunelización.
+                        El alumnado deberá diagnosticar por qué no pueden acceder a sus servidores, investigar
+                        soluciones y aprender a implementar y configurar un <strong>servidor VPN</strong> en su
+                        infraestructura para lograr una conexión remota segura mediante tunelización.
                     </p>
                     <div class="bg-brand-50 border-l-4 border-brand-500 p-4 rounded-r-lg mt-6">
                         <p class="text-sm text-brand-900 font-medium m-0">
-                            <strong>Componente ético:</strong> Finalmente, se trabajará la reflexión crítica mediante un debate sobre los dilemas éticos y las consecuencias de utilizar VPNs para evadir políticas de seguridad corporativas o educativas.
+                            <strong>Componente ético:</strong> Finalmente, se trabajará la reflexión crítica mediante un
+                            debate sobre los dilemas éticos y las consecuencias de utilizar VPNs para evadir políticas
+                            de seguridad corporativas o educativas.
                         </p>
                     </div>
                 </div>
             </section>
 
+            <div class="mt-6">
+                <a href="infografia.html"
+                    class="block w-full text-center bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-xl shadow transition">
+                    Ver infografía del proyecto
+                </a>
+            </div>
 
             <section class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10"></div>
-                
+
                 <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 text-slate-800">
-                    <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4H5"></path></svg>
+                    <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4H5">
+                        </path>
+                    </svg>
                     Justificación Pedagógica
                 </h2>
                 <p class="text-slate-600 mb-6">
-                    La elección de esta Situación de Aprendizaje emana directamente de las conclusiones y el análisis de mi propia práctica docente realizados en la <a href="https://docs.google.com/document/d/1IURruXqZfftHzO5Lqb75-3n5DiPJEUgwZmGr-RDm6tc/edit?usp=sharing" target="_blank" style="color: blue; font-weight: bold;"> Tarea 1.1 (Rutina de pensamiento de Gibbs)</a> . Extraigo dos grandes propuestas de mejora:
+                    La elección de esta Situación de Aprendizaje emana directamente de las conclusiones y el análisis de
+                    mi propia práctica docente realizados en la <a
+                        href="https://docs.google.com/document/d/1IURruXqZfftHzO5Lqb75-3n5DiPJEUgwZmGr-RDm6tc/edit?usp=sharing"
+                        target="_blank" style="color: blue; font-weight: bold;"> Tarea 1.1 (Rutina de pensamiento de
+                        Gibbs)</a> . Extraigo dos grandes propuestas de mejora:
                 </p>
 
                 <div class="space-y-6">
 
                     <div class="flex gap-4 items-start">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 font-bold">1</div>
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 font-bold">
+                            1</div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-800 mb-2">Gestión de la incertidumbre</h4>
                             <p class="text-slate-600 text-sm leading-relaxed">
-                                Concluí que la mejor forma de desarrollar la competencia de resolución de problemas técnicos del alumnado no es evitar los errores, sino provocarlos de manera didáctica. Al enfrentarse a una restricción de red real, el alumnado desarrollará resiliencia tecnológica y autonomía.
+                                Concluí que la mejor forma de desarrollar la competencia de resolución de problemas
+                                técnicos del alumnado no es evitar los errores, sino provocarlos de manera didáctica. Al
+                                enfrentarse a una restricción de red real, el alumnado desarrollará resiliencia
+                                tecnológica y autonomía.
                             </p>
                         </div>
                     </div>
 
                     <div class="flex gap-4 items-start">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 font-bold">2</div>
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 font-bold">
+                            2</div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-800 mb-2">Ponderación de dilemas éticos</h4>
                             <p class="text-slate-600 text-sm leading-relaxed">
-                                Identifiqué la necesidad urgente de abordar el dilema ético que supone dotar al alumnado de conocimientos para evadir restricciones de seguridad de red. Esta SdA integra un espacio obligatorio de reflexión y debate sobre las políticas de seguridad corporativas y la ética profesional.
+                                Identifiqué la necesidad urgente de abordar el dilema ético que supone dotar al alumnado
+                                de conocimientos para evadir restricciones de seguridad de red. Esta SdA integra un
+                                espacio obligatorio de reflexión y debate sobre las políticas de seguridad corporativas
+                                y la ética profesional.
                             </p>
                         </div>
                     </div>
@@ -196,7 +264,8 @@
     <footer class="bg-white border-t border-slate-200 mt-auto">
         <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-3">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSID9dQ3VtK_K4fSyzWpNP6ljdZ3gKQTiqyfQ&s" alt="Junta de Andalucía" class="h-8 opacity-60 grayscale hover:grayscale-0 transition-all">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSID9dQ3VtK_K4fSyzWpNP6ljdZ3gKQTiqyfQ&s"
+                    alt="Junta de Andalucía" class="h-8 opacity-60 grayscale hover:grayscale-0 transition-all">
                 <div class="text-sm text-slate-500 border-l border-slate-300 pl-3">
                     <strong>Competencia Digital Docente</strong><br>
                     Formación del Profesorado - Nivel B2
@@ -206,7 +275,11 @@
             <div class="text-center md:text-left text-sm text-slate-600 flex-1 md:px-6">
                 <p>Realizado por <strong>Pablo José Carrillo García</strong></p>
                 <p class="flex items-center justify-center md:justify-start gap-1 mt-1 text-xs">
-                    <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                        </path>
+                    </svg>
                     <span><strong>Dominio Público:</strong> Libre para que lo use todo el mundo.</span>
                 </p>
             </div>
@@ -215,4 +288,5 @@
     </footer>
 
 </body>
+
 </html>
