@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía: Licencias y Seguridad Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            body {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased py-8">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden border border-slate-200">
+
+        <header class="bg-slate-900 text-white p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full blur-3xl -mr-10 -mt-10">
+            </div>
+            <div class="relative z-10">
+                <span
+                    class="bg-blue-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Módulo
+                    Profesional de Seguridad y Alta Disponibilidad</span>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3">Licencias y Derechos Digitales</h1>
+                <p class="text-slate-300 max-w-2xl text-sm md:text-base">Guía fundamental para futuros Administradores
+                    de Sistemas sobre propiedad intelectual, publicación de recursos, protección de datos y garantías de
+                    derechos digitales.</p>
+            </div>
+        </header>
+
+        <div class="p-8 md:p-12">
+
+            <section class="mb-16">
+                <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                    <div class="bg-blue-100 text-blue-700 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">1. Licencias: Consumo y publicación de contenidos</h2>
+                </div>
+
+                <p class="text-slate-600 mb-6 leading-relaxed text-justify">
+                    Como Técnicos Superiores en Administradores de Sistemas informáticos en Red, estaréis constantemente
+                    consumiendo y creando recursos. Desde descargar un icono para un diagrama de red en Packet Tracer,
+                    hasta publicar un script de automatización en GitHub o una infografía sobre seguridad. Es vital
+                    conocer qué podéis hacer y cómo proteger vuestras creaciones.
+                </p>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-8">
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        Al descargar recursos de Internet
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-justify">
+                        Al descargar fotos, vectores, iconos o cualquier recurso de Internet para vuestros trabajos, es
+                        importante conocer la licencia asociada:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+                        <div
+                            class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="assets/img/copyright.png" alt="Copyright" width="55">
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg mb-2">Copyright</h4>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                "Todos los derechos reservados". <strong>No se puede usar el recurso sin permiso expreso
+                                    del autor</strong>, salvo pequeñas citas justificadas por motivos educativos.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="assets/img/public_domain.png" alt="Dominio Público" width="55">
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg mb-2">Dominio Público</h4>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                <strong>Recursos sin restricciones de uso ni modificación.</strong></br></br>Sitios
+                                recomendados: Pixabay, Pexels, Unsplash.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="assets/img/copyleft.png" alt="Copyleft" width="55">
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-lg mb-2">Copyleft</h4>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed mb-2">
+                                Permite usar y modificar la obra libremente, pero <strong>obligando a citar al autor
+                                    original</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 lg:p-8">
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                        </svg>
+                        Al publicar vuestros propios proyectos
+                    </h3>
+
+                    <section class="mb-16">
+                        <p class="text-slate-600 mb-6 leading-relaxed text-justify">
+                            Cuando creáis contenido original, es importante elegir la licencia correcta para proteger
+                            vuestra autoría y definir cómo otros pueden usarlo. Según el tipo de contenido, distinguimos
+                            dos grandes grupos:
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div
+                                class="bg-white p-6 rounded-xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="text-lg font-bold text-blue-800 mb-4 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Documentos y multimedia
+                                </h3>
+                                <p class="text-sm text-slate-700 mb-4 leading-relaxed text-justify">
+                                    Para <strong>manuales, infografías, presentaciones, fotos y vídeos</strong> tenemos
+                                    la licencia <strong>Creative Commons</strong>, la cuál permite decidir
+                                    condiciones de uso combinando cuatro restricciones:
+                                </p>
+                                <div class="grid grid-cols-2 md:grid-cols-2 gap-2 mb-8">
+                                    <div
+                                        class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 text-center flex flex-col items-center justify-center">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2 text-blue-700 font-bold text-sm">
+                                            BY</div>
+                                        <span class="font-bold text-slate-800 block mb-1 text-sm">Atribución</span>
+                                        <span class="text-xs text-slate-500">Requiere citar al autor.</span>
+                                    </div>
+                                    <div
+                                        class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 text-center flex flex-col items-center justify-center">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2 text-blue-700 font-bold text-sm">
+                                            SA</div>
+                                        <span class="font-bold text-slate-800 block mb-1 text-sm">Share Alike</span>
+                                        <span class="text-xs text-slate-500">Compartir bajo la misma licencia.</span>
+                                    </div>
+                                    <div
+                                        class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 text-center flex flex-col items-center justify-center">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2 text-blue-700 font-bold text-sm">
+                                            NC</div>
+                                        <span class="font-bold text-slate-800 block mb-1 text-sm">No Comercial</span>
+                                        <span class="text-xs text-slate-500">Sin fines comerciales.</span>
+                                    </div>
+                                    <div
+                                        class="bg-white p-4 rounded-lg shadow-sm border border-blue-100 text-center flex flex-col items-center justify-center">
+                                        <div
+                                            class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2 text-blue-700 font-bold text-sm">
+                                            ND</div>
+                                        <span class="font-bold text-slate-800 block mb-1 text-sm">No Derivadas</span>
+                                        <span class="text-xs text-slate-500">Sin modificaciones.</span>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img src="assets/img/creative-commons.png" alt="Creative Commons">
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-emerald-50 p-6 rounded-xl border border-emerald-100 shadow-sm hover:shadow-md transition-shadow">
+                                <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                    Scripts y programas
+                                </h3>
+                                <p class="text-sm text-slate-700 mb-4 leading-relaxed text-justify">
+                                    Para <strong>scripts, programas y software.</strong> Permite compartir código
+                                    manteniendo ciertos derechos y condiciones según la licencia elegida:
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-1 gap-5">
+                                    <div class="bg-emerald-50/50 p-6 rounded-xl border border-emerald-100">
+                                        <div class="flex items-center gap-2 mb-3 text-center">
+                                            <h4 class="font-bold text-emerald-800 text-lg ">GNU / GPL</h4>
+                                        </div>
+                                        <p class="text-sm text-slate-600 leading-relaxed text-justify">Cualquier modificación debe mantenerse libre.</p>
+                                        <div style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="assets/img/gnu.png" alt="GNU" width="150">
+                                            <img src="assets/img/GPL.svg" alt="GPL" width="150">
+                                        </div>
+                                    </div>
+                                    <div class="bg-emerald-50/50 p-6 rounded-xl border border-emerald-100">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <h4 class="font-bold text-emerald-800 text-lg">MIT License</h4>
+                                        </div>
+                                        <p class="text-sm text-slate-600 leading-relaxed text-justify">Permite uso comercial y
+                                        combinación con código cerrado, solo exige conservar el aviso de autoría.</p>
+                                        <p class="text-sm text-slate-600 leading-relaxed text-justify">Cualquier modificación debe mantenerse libre.</p>
+                                        <div style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="assets/img/MIT.png" alt="MIT" width="150">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </section>
+
+            <section class="mb-12">
+                <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-4">
+                    <div class="bg-emerald-100 text-emerald-700 p-2 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">2. Derechos Digitales y Protección de Datos Personales
+                    </h2>
+                </div>
+
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Tanto en vuestra etapa educativa como en vuestro futuro profesional administrando servidores y bases
+                    de datos empresariales, el cumplimiento de la Ley Orgánica de Protección de Datos y Garantía de los
+                    Derechos Digitales (LOPDGDD) es innegociable. Conoce tus derechos como alumno y tus obligaciones
+                    técnicas.
+                </p>
+
+                <div class="space-y-4">
+
+                    <div
+                        class="bg-slate-50 p-5 rounded-lg border border-slate-200 flex flex-col md:flex-row gap-4 items-start">
+                        <div
+                            class="bg-emerald-600 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            1</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-base mb-1">Derecho a la intimidad y privacidad
+                                digital</h4>
+                            <p class="text-sm text-slate-600">Tienes derecho a la protección de tus datos personales
+                                dentro del centro educativo y en el uso de las plataformas de e-learning. Nadie puede
+                                publicar fotografías tuyas o trabajos que te identifiquen sin tu consentimiento expreso.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-slate-50 p-5 rounded-lg border border-slate-200 flex flex-col md:flex-row gap-4 items-start">
+                        <div
+                            class="bg-emerald-600 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            2</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-base mb-1">Derecho a la desconexión digital</h4>
+                            <p class="text-sm text-slate-600">Dispones del derecho a no atender comunicaciones digitales
+                                (foros, correos, tareas) fuera del horario lectivo establecido o durante tus periodos de
+                                descanso en la Formación en Centros de Trabajo (FCT).</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-slate-50 p-5 rounded-lg border-l-4 border-l-blue-500 border-slate-200 flex flex-col md:flex-row gap-4 items-start relative overflow-hidden">
+                        <div
+                            class="bg-blue-600 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            3</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-base mb-1">Responsabilidad SysAdmin: El RGPD en tus
+                                prácticas</h4>
+                            <p class="text-sm text-slate-600">Como futuro ASIR, al configurar servicios web (Apache,
+                                Nginx) o bases de datos (MySQL, Oracle) en tus prácticas, debes aplicar el principio de
+                                <strong>"Privacidad desde el Diseño"</strong>. Eres responsable de asegurar puertos,
+                                cifrar conexiones (HTTPS) y proteger la información, incluso si son bases de datos de
+                                prueba.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-slate-50 p-5 rounded-lg border-l-4 border-l-blue-500 border-slate-200 flex flex-col md:flex-row gap-4 items-start">
+                        <div
+                            class="bg-blue-600 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            4</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-base mb-1">Peligro en Repositorios Cloud</h4>
+                            <p class="text-sm text-slate-600">Al subir tus prácticas de grado a nubes públicas (AWS,
+                                Azure) o repositorios (GitHub, GitLab), <strong>jamás subas credenciales, tokens de API,
+                                    contraseñas en texto plano o datos personales reales</strong>. Una fuga de datos por
+                                mala configuración es una de las infracciones más graves de la LOPDGDD.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-slate-50 p-5 rounded-lg border border-slate-200 flex flex-col md:flex-row gap-4 items-start">
+                        <div
+                            class="bg-emerald-600 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            5</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-base mb-1">Derechos ARSO y Huella Digital</h4>
+                            <p class="text-sm text-slate-600">Tienes derecho al <strong>A</strong>cceso,
+                                <strong>R</strong>ectificación, <strong>S</strong>upresión (derecho al olvido) y
+                                <strong>O</strong>posición de tus datos. Recuerda cuidar tu huella digital profesional;
+                                los perfiles técnicos de ASIR son muy auditados por las empresas de ciberseguridad antes
+                                de la contratación.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="bg-slate-50 border-t border-slate-200 p-8 text-center">
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex gap-2 opacity-70 hover:opacity-100 transition-opacity">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC" class="h-6">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY" class="h-6">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NC" class="h-6">
+                    <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="SA" class="h-6">
+                </div>
+                
+                <div class="text-sm text-slate-500 max-w-md leading-relaxed">
+                    <p class="mb-2">
+                        Esta guía de <span class="font-semibold text-slate-700">Licencias y Derechos Digitales</span> 
+                        ha sido creada por <span class="font-semibold text-slate-700 text-blue-600">Pablo José Carrillo García</span>.
+                    </p>
+                    <p>
+                        Disponible bajo la licencia 
+                        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" class="text-blue-600 hover:underline font-medium">
+                            Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)
+                        </a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
