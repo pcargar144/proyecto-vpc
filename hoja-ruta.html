@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Ruta: Despliegue VPC en AWS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        aws: {
+                            orange: '#FF9900',
+                            dark: '#232F3E',
+                            light: '#eaeded'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen selection:bg-aws-orange selection:text-white pb-20">
+
+    <header class="pt-16 pb-10 px-4 text-center">
+        <div class="inline-flex items-center justify-center p-3 bg-aws-orange/10 rounded-full mb-4">
+            <i data-lucide="cloud-cog" class="w-10 h-10 text-aws-orange"></i>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 print-text-black">
+            Hoja de Ruta: Despliegue VPC en AWS
+        </h1>
+        <p class="text-slate-400 max-w-2xl mx-auto text-lg print-text-black">
+            Guía visual para el alumnado de ASIR. Proyecto práctico de diseño, implementación y securización de una arquitectura de red en la nube.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative mt-10">
+        
+        <div class="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2 rounded-full print-border"></div>
+
+        <div id="timeline-container" class="relative z-10">
+        </div>
+
+    </main>
+
+    <script>
+        const timelineData = [
+            {
+                title: "1. Explicación del profesor",
+                task: "Sesión teórica introductoria sobre los contenidos (VPC, Proxy, Cortafuegos en Linux/AWS, Subredes y Zonas de Disponibilidad).",
+                time: "2 horas",
+                group: "Gran grupo",
+                space: "Aula 2º ASIR",
+                tools: "Google Presentaciones, eXeLearning, Moodle Centros",
+                icon: "presentation"
+            },
+            {
+                title: "2. Investigación y contextualización",
+                task: "Búsqueda guiada en la documentación oficial para afianzar los conceptos explicados y entender cómo AWS implementa la seguridad perimetral.",
+                time: "2 horas",
+                group: "Individual",
+                space: "Aula 2º ASIR",
+                tools: "Symbaloo (con enlaces curados) y documentación oficial de AWS Academy",
+                icon: "search"
+            },
+            {
+                title: "3. Diseño de arquitectura y subnetting",
+                task: "Cálculo de direccionamiento IP y dibujo de la topología de la red, ubicando dónde irán los Security Groups, NACLs, servidor web, servidor de BBDD y los servidores Proxy.",
+                time: "3 horas",
+                group: "Individual",
+                space: "Aula 2º ASIR",
+                tools: "Calculadora IP, Gliffy y Draw.io",
+                icon: "network"
+            },
+            {
+                title: "4. Despliegue técnico en AWS",
+                task: "Implementación práctica en la nube. Creación de subredes, despliegue de instancias EC2, configuración de cortafuegos y despliegue del proxy/proxy inverso.",
+                time: "6 horas",
+                group: "Individual",
+                space: "Aula 2º ASIR",
+                tools: "Consola web de AWS y terminal Linux",
+                icon: "server"
+            },
+            {
+                title: "5. Pruebas",
+                task: "Verificación del funcionamiento de la red. Comprobación de bloqueos de tráfico, monitorización gráfica y resolución de posibles errores de conectividad en el proxy o el cortafuegos.",
+                time: "3 horas",
+                group: "Individual",
+                space: "Aula 2º ASIR",
+                tools: "Consola web de AWS y terminal Linux",
+                icon: "activity"
+            },
+            {
+                title: "6. Documentación y entrega",
+                task: "Elaboración de un videotutorial donde el alumno explique su topología, muestre las reglas aplicadas y justifique cómo solucionó los errores de la fase de pruebas.",
+                time: "3 horas",
+                group: "Individual",
+                space: "Aula 2º ASIR",
+                tools: "Loom o Screenpal, para la grabación y entrega en Moodle Centros",
+                icon: "video"
+            },
+            {
+                title: "7. Gamificación",
+                task: "Concurso de preguntas y respuestas en el aula para repasar los puertos, comandos, reglas de filtrado y conceptos clave antes de la evaluación final.",
+                time: "1 hora",
+                group: "Gran grupo",
+                space: "Aula 2º ASIR",
+                tools: "Kahoot!",
+                icon: "gamepad-2"
+            }
+        ];
+
+        const container = document.getElementById('timeline-container');
+
+        timelineData.forEach((item, index) => {
+            const isLeft = index % 2 === 0;
+            const alignmentClass = isLeft ? 'md:flex-row-reverse' : 'md:flex-row';
+            const textAlignClass = isLeft ? 'md:text-right' : 'md:text-left';
+            const marginClass = isLeft ? 'md:pr-12' : 'md:pl-12';
+            
+            const cardHTML = `
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full fade-in ${alignmentClass}">
+                    
+                    <!-- Espaciador para desktop -->
+                    <div class="hidden md:block md:w-5/12"></div>
+                    
+                    <!-- Círculo central con icono -->
+                    <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 bg-slate-900 border-4 border-aws-orange rounded-full z-20 print-bg-white print-border">
+                        <i data-lucide="${item.icon}" class="w-4 h-4 text-aws-orange"></i>
+                    </div>
+
+                    <!-- Tarjeta de contenido -->
+                    <div class="w-full pl-14 md:pl-0 md:w-5/12 ${marginClass}">
+                        <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-aws-orange/50 transition-colors duration-300 shadow-xl print-bg-white print-text-black">
+                            <h3 class="text-xl font-bold text-aws-orange mb-3">${item.title}</h3>
+                            <p class="text-slate-300 mb-5 text-sm leading-relaxed print-text-black">${item.task}</p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                <div class="flex items-start gap-2">
+                                    <i data-lucide="clock" class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"></i>
+                                    <span class="text-slate-200 print-text-black">${item.time}</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i data-lucide="users" class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"></i>
+                                    <span class="text-slate-200 print-text-black">${item.group}</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"></i>
+                                    <span class="text-slate-200 print-text-black">${item.space}</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i data-lucide="wrench" class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"></i>
+                                    <span class="text-slate-200 print-text-black">${item.tools}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += cardHTML;
+        });
+
+        lucide.createIcons();
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Dejar de observar una vez que es visible
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+     <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSID9dQ3VtK_K4fSyzWpNP6ljdZ3gKQTiqyfQ&s"
+                    alt="Junta de Andalucía" class="h-8 opacity-60 grayscale hover:grayscale-0 transition-all">
+                <div class="text-sm text-slate-500 border-l border-slate-300 pl-3">
+                    <strong>Competencia Digital Docente</strong><br>
+                    Formación del Profesorado - Nivel B2
+                </div>
+            </div>
+
+            <div class="text-center md:text-left text-sm text-slate-600 flex-1 md:px-6">
+                <p>Realizado por <strong>Pablo José Carrillo García</strong></p>
+                <p class="flex items-center justify-center md:justify-start gap-1 mt-1 text-xs">
+                    <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                        </path>
+                    </svg>
+                    <span><strong>Dominio Público:</strong> Libre para que lo use todo el mundo.</span>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
