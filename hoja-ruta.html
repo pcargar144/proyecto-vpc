@@ -79,7 +79,8 @@
                 group: "Gran grupo",
                 space: "Aula 2º ASIR",
                 tools: "Google Presentaciones, eXeLearning, Moodle Centros",
-                icon: "presentation"
+                icon: "presentation",
+                criteria: ["RA4.a", "RA4.b", "RA5.a"]
             },
             {
                 title: "2. Investigación y contextualización",
@@ -88,7 +89,8 @@
                 group: "Individual",
                 space: "Aula 2º ASIR",
                 tools: "Symbaloo (con enlaces curados) y documentación oficial de AWS Academy",
-                icon: "search"
+                icon: "search",
+                criteria: ["RA4.a", "RA4.b", "RA4.f"]
             },
             {
                 title: "3. Diseño de arquitectura y subnetting",
@@ -97,7 +99,8 @@
                 group: "Individual",
                 space: "Aula 2º ASIR",
                 tools: "Calculadora IP, Gliffy y Draw.io",
-                icon: "network"
+                icon: "network",
+                criteria: ["RA4.c"]
             },
             {
                 title: "4. Despliegue técnico en AWS",
@@ -106,7 +109,8 @@
                 group: "Individual",
                 space: "Aula 2º ASIR",
                 tools: "Consola web de AWS y terminal Linux",
-                icon: "server"
+                icon: "server",
+                criteria: ["RA4.d", "RA4.f", "RA5.b", "RA5.d", "RA5.e", "RA5.f", "RA5.h"]
             },
             {
                 title: "5. Pruebas",
@@ -115,7 +119,8 @@
                 group: "Individual",
                 space: "Aula 2º ASIR",
                 tools: "Consola web de AWS y terminal Linux",
-                icon: "activity"
+                icon: "activity",
+                criteria: ["RA4.e", "RA4.f", "RA4.g", "RA5.f", "RA5.g"]
             },
             {
                 title: "6. Documentación y entrega",
@@ -124,7 +129,8 @@
                 group: "Individual",
                 space: "Aula 2º ASIR",
                 tools: "Loom o Screenpal, para la grabación y entrega en Moodle Centros",
-                icon: "video"
+                icon: "video",
+                criteria: ["RA4.h", "RA5.i"]
             },
             {
                 title: "7. Gamificación",
@@ -133,7 +139,8 @@
                 group: "Gran grupo",
                 space: "Aula 2º ASIR",
                 tools: "Kahoot!",
-                icon: "gamepad-2"
+                icon: "gamepad-2",
+                criteria: ["RA4 — repaso", "RA5 — repaso"]
             }
         ];
 
@@ -145,24 +152,26 @@
             const textAlignClass = isLeft ? 'md:text-right' : 'md:text-left';
             const marginClass = isLeft ? 'md:pr-12' : 'md:pl-12';
             
+            // Generar los badges de los criterios
+            const criteriaBadges = item.criteria.map(c => 
+                `<span class="inline-block bg-slate-900/60 text-aws-orange text-[11px] font-mono px-2 py-1 rounded border border-aws-orange/30 print-border mb-1 mr-1.5 shadow-sm">${c}</span>`
+            ).join('');
+
             const cardHTML = `
                 <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full fade-in ${alignmentClass}">
                     
-                    <!-- Espaciador para desktop -->
                     <div class="hidden md:block md:w-5/12"></div>
                     
-                    <!-- Círculo central con icono -->
                     <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 bg-slate-900 border-4 border-aws-orange rounded-full z-20 print-bg-white print-border">
                         <i data-lucide="${item.icon}" class="w-4 h-4 text-aws-orange"></i>
                     </div>
 
-                    <!-- Tarjeta de contenido -->
                     <div class="w-full pl-14 md:pl-0 md:w-5/12 ${marginClass}">
                         <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-aws-orange/50 transition-colors duration-300 shadow-xl print-bg-white print-text-black">
                             <h3 class="text-xl font-bold text-aws-orange mb-3">${item.title}</h3>
                             <p class="text-slate-300 mb-5 text-sm leading-relaxed print-text-black">${item.task}</p>
                             
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mb-4">
                                 <div class="flex items-start gap-2">
                                     <i data-lucide="clock" class="w-4 h-4 text-slate-400 mt-0.5 shrink-0"></i>
                                     <span class="text-slate-200 print-text-black">${item.time}</span>
@@ -180,6 +189,17 @@
                                     <span class="text-slate-200 print-text-black">${item.tools}</span>
                                 </div>
                             </div>
+                            
+                            <div class="pt-4 border-t border-slate-700/60 print-border">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i data-lucide="clipboard-check" class="w-4 h-4 text-slate-400 shrink-0"></i>
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 print-text-black">Criterios de Evaluación</span>
+                                </div>
+                                <div class="flex flex-wrap">
+                                    ${criteriaBadges}
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -199,7 +219,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Dejar de observar una vez que es visible
+                    observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
